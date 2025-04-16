@@ -1,0 +1,220 @@
+/* Global resets and fonts */
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.raleway-font {
+    font-family: "Delius Swash Caps", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body, html {
+    background-image: url(../images/blueabsjpg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Home container stays fixed with a margin */
+.home-container {
+    display: flex;
+    flex-direction: row;
+    height: 98vh;
+    width: 97vw;
+    overflow: hidden;
+    margin: 20px; /* Uniform margin on all sides */
+}
+
+/* Sidebar styles (left, profile-left) */
+.left, .profile-left {
+    flex: 0 0 250px;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    color: #ecf0f1;
+    padding: 20px;
+    margin-right: 5px;
+}
+.left {
+    margin-left: 10px;
+}
+
+/* Additional tweaks for profile-left */
+.profile-left {
+    width: 300px !important;
+}
+
+/* Profile picture and info styling */
+.profile-picture {
+    width: 60vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: row;
+}
+.img-section {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.img-section img {
+    height: 110px;
+    width: 110px;
+    border: 2px solid black;
+    border-radius: 100px;
+    margin-left: -50px;
+}
+.img-section > div > p {
+    font-size: 14px;
+}
+.text-section {
+    line-height: 13px;
+    font-size: 14px;
+}
+.post-title {
+    margin-left: 4%;
+    color: #c7d22d;
+}
+button {
+    background-color: rgba(16, 211, 32, 0.852);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #b8e4f6;
+}
+.post-media {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Profile Page Grid: Applies only to posts inside .user-posts */
+.user-posts {
+    max-height: 300px; /* Adjust as needed */
+    height: 220px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user-posts .post {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    width: 180px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Home Page Posts Styling: Only for posts inside .posts container */
+.posts .post {
+    /* These settings are different from the profile grid cards */
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    max-width: 550px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+/* Optional scrollbar styling for grid containers */
+.user-posts::-webkit-scrollbar {
+    width: 6px;
+}
+.user-posts::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+/* Additional styling for home container elements if needed */
+.home-container ul {
+    list-style: none;
+    padding: 0;
+}
+.home-container li {
+    border: 1.3px solid rgb(1, 242, 255);
+    color: rgb(1, 242, 255);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.home-container li:hover {
+    color: #000;
+}
+.home-container li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: #b8e4f6;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: -1;
+    transition: transform 0.5s ease-in-out;
+}
+.home-container li:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Modal Styles (for Edit Profile etc.) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.success-message {
+    color: green;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}

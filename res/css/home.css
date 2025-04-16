@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.raleway-font {
+    font-family: "Delius Swash Caps", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body ,html{
+    background-image: url(../images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+    height:98vh;
+    width: 97vw;
+    overflow: hidden;
+    /* position: fixed; */
+
+    div {
+        border-radius: 10px;
+    }
+}
+
+.left,.profile-left {
+    flex: 0 0 250px;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    color: #ecf0f1;
+    padding: 20px;
+    margin-right: 5px;
+}
+.left{
+    margin-left: 10px;
+}
+
+.profile-left {
+    width: 300px !important;
+}
+
+.profile-picture {
+    width: 60vw;
+    height: 35vh;
+    /* border: 2px solid blueviolet; */
+    display: flex;
+    flex-direction: row;
+}
+
+.img-section {
+    width: 20vw;
+    /* border-right: 1px solid rgb(31, 205, 54); */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.img-section img {
+    height: 110px;
+    width: 110px;
+    border: 2px solid black;
+    border-radius: 100px;
+    margin-left: -50px;
+}
+
+.img-section>div>p {
+    font-size: 14px;
+}
+
+.text-section {
+    line-height: 13px;
+    font-size: 14px;
+}
+
+.post-title {
+    margin-left: 4%;
+    color: #c7d22d;
+}
+
+button {
+    background-color: rgba(16, 211, 32, 0.852);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #b8e4f6;
+}
+.post-media {
+    width: 100%;
+    max-height: 70% !important; /* Fixed height for consistency */
+    border-radius: 5px;
+    object-fit: cover; /* Ensures images/videos fit nicely */
+}
+
+/* Add this to your CSS file */
+.create-post textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.create-post button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-post button:hover {
+    background-color: darkgreen;
+}
+
+.user-posts .post {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    max-width: 550px;
+    width: 180px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.posts .post{
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    max-width: 550px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.posts{
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.user-posts {
+    max-height: 300px; /* Adjust height as needed */
+    height: 220px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user-posts::-webkit-scrollbar {
+    width: 3px;
+    height: 10px;
+}
+
+.user-posts::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+small,p{
+    color: #fff;
+}
+
+.post-profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-username {
+    font-weight: bold;
+    background: linear-gradient(90deg, #c7d22d, #26d2c1);
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+.profile-picture img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.profile-stats {
+    text-align: left;
+}
+
+.profile-actions {
+    margin-top: 20px;
+}
+
+.middle {
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent background */
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    margin-right: 5px;
+    font-family: Raleway;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.right {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+}
+
+.home-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.home-container li {
+    border: 1.3px solid rgb(1, 242, 255);
+    color: rgb(1, 242, 255);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.home-container li {
+    position: relative;
+    overflow: hidden;
+}
+.home-container li:hover{
+    color: #000;
+}
+/* Create a pseudo-element that will act as the background */
+.home-container li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: #b8e4f6;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: -1;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* On hover, expand the pseudo-element */
+.home-container li:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.success-message{
+    color: green;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#createPostForm textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 14px;
+  }
+  
+  #createPostForm input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  /* Style the submit button */
+  #createPostForm button {
+    background-color: rgba(16, 211, 32, 0.85);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  #createPostForm button:hover {
+    background-color: #14b12d;
+  }

@@ -1,0 +1,144 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #b78dae; /* Optional background */
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;    /* Vertical centering */
+    margin: 0;
+}
+.container, .container_login{
+    height: 90vh;
+    width: 85vw;
+    background-image: linear-gradient(135deg, rgb(235, 229, 229),rgb(212, 188, 50));
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+    display: flex;
+}
+.container_login{
+    justify-content: end;
+}
+.container_login > .login{
+    margin-right: 50px;
+}
+.main{
+    height: 90vh;
+    width: 85vw;
+    border: 2px solid greenyellow;
+    color: red;
+}
+.login{
+    /* width: 40%; */
+    margin-left: 3%;
+    padding: 20px;
+    /* border:2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    box-sizing: border-box;
+}
+/* .login-form {
+    display: none;
+} */
+
+#title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 5%;
+    margin-top: 0;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+}
+.alert{
+    color: red;
+    margin-bottom: 10px;
+}
+label{
+    margin-left: 4%;
+    opacity: 0.6;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 250px;
+    height: 25px;
+    font-size: 14px; /* Adjust font size */
+    border-radius: 20px;
+    border: none;
+}
+#btn{
+    margin-top: 10px;
+    width: 265px;
+    height: 35px;
+    background-color: orange;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+}
+/* #btn:hover{
+    cursor:pointer;
+    background-color: chocolate; */
+/* } */
+.imageclass > img{
+    margin-top: 30px;
+    height: 80vh;
+    width: 49vw;
+    border-radius: 30px;
+}
+.imageclass{
+    position: relative;
+    width: 40%;
+    transition: transform 2s ease-in-out;
+    margin-left: 10%;
+}
+.move-left{
+    transform: translateX(-90%);
+}
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    margin-left: 5%;
+}
+.image_div,.image_div_login{
+    position: relative; /* Make the container a positioning context */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.5%;
+    margin-bottom: 25px;
+    height: 75vh;
+    width: 50vw;
+    z-index: 1;
+}
+.image_div_login{
+    margin-left: 6%;
+}
+.image_div_login > img ,.image_div > img{
+    width: 100%;
+    height: 100%;
+    border-radius:0 30px 0 30px;
+}
+.overlay {
+    position: absolute; /* Position the overlay absolutely within the container */
+    top: 17%; /* Align to the top */
+    left: 44%; /* Align to the left */
+    width: 30%; /* Cover the entire width of the container */
+    height: 10%; /* Cover the entire height of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 30px 30px 0 30px; /* Match the image's border radius */
+    z-index: 10; /* Ensure the overlay is above the image */
+}
+
+.overlay > p {
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some padding */
+    margin: 0; /* Remove default margin */
+}
